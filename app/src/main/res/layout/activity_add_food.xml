@@ -28,6 +28,7 @@
                     android:id="@+id/imvBack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:src="@drawable/ic_arrow_back" />
 
                 <TextView
@@ -37,13 +38,14 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_big" />
+                    android:textSize="@dimen/text_size_medium" />
 
                 <TextView
                     android:id="@+id/tv_saveFood"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/order_margin"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/app_margin_small"
                     android:text="@string/btn_save"
                     android:textColor="@color/colorWhite" />
             </LinearLayout>
@@ -60,19 +62,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/order_margin">
+            android:layout_marginTop="@dimen/app_margin_small">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/order_margin"
+                android:layout_margin="@dimen/app_margin_small"
                 android:layout_weight="2"
                 android:text="@string/tv_Food_name" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/order_margin"
+                android:layout_margin="@dimen/app_margin_small"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:hint="Nhập tên món" />
@@ -115,19 +117,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/order_margin">
+            android:layout_marginTop="@dimen/app_margin_small">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/order_margin"
+                android:layout_margin="@dimen/app_margin_small"
                 android:text="@string/tv_unit" />
 
             <TextView
                 android:id="@+id/tvUnit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/order_margin"
+                android:layout_margin="@dimen/app_margin_small"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="Bát"
@@ -148,12 +150,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/order_margin">
+            android:layout_marginTop="@dimen/app_margin_small">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/order_margin"
+                android:layout_margin="@dimen/app_margin_small"
                 android:text="@string/tv_color" />
 
             <FrameLayout
@@ -176,7 +178,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/order_margin"
+                    android:layout_margin="@dimen/app_margin_small"
                     android:text="@string/tv_icon" />
 
                 <FrameLayout
@@ -198,7 +200,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/order_margin"
+        android:layout_margin="@dimen/app_margin_small"
         android:background="@drawable/bg_button_save"
         android:text="@string/btn_save"
         android:textColor="@color/colorWhite"

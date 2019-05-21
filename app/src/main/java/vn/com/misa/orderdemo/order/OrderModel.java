@@ -19,7 +19,7 @@ public class OrderModel extends DBOpenHeplper implements IOrder {
     public OrderModel(Context context) {
         super(context);
         controllerSQLite = new ControllerSQLite(context);
-//        controllerSQLite.createDataBase();
+        controllerSQLite.createDataBase();
     }
 
 /**

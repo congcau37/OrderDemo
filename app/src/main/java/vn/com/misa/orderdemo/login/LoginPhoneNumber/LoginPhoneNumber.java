@@ -1,12 +1,16 @@
-package vn.com.misa.orderdemo.login;
+package vn.com.misa.orderdemo.login.LoginPhoneNumber;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatButton;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,33 +20,40 @@ import butterknife.OnClick;
 import vn.com.misa.orderdemo.MainApp;
 import vn.com.misa.orderdemo.R;
 
-/**
- * class đăng nhập
- * @created_by tdcong
- * @date 5/17/2019
- */
-public class LoginView extends AppCompatActivity implements ILoginContract.ILoginView {
+public class LoginPhoneNumber extends AppCompatActivity implements ILoginContract.ILoginView {
 
-    @BindView(R.id.etInputEmail)
-    EditText etInputEmail;
-    @BindView(R.id.etInputPassword)
-    EditText etInputPassword;
+    @BindView(R.id.btnBack)
+    ImageButton btnBack;
+    @BindView(R.id.imageView1)
+    ImageView imageView1;
+    @BindView(R.id.edUserName)
+    EditText edUserName;
+    @BindView(R.id.lnClearUserName)
+    LinearLayout lnClearUserName;
+    @BindView(R.id.edPassword)
+    EditText edPassword;
+    @BindView(R.id.lnClearPassword)
+    LinearLayout lnClearPassword;
     @BindView(R.id.btnLogin)
-    AppCompatButton btnLogin;
-    @BindView(R.id.tvLinkSignUp)
-    TextView tvLinkSignUp;
-    @BindView(R.id.cbSaveLogin)
-    CheckBox cbSaveLogin;
+    Button btnLogin;
+    @BindView(R.id.tvForgotPassword)
+    TextView tvForgotPassword;
+    @BindView(R.id.imgInfo)
+    ImageView imgInfo;
+    @BindView(R.id.layoutLogin)
+    LinearLayout layoutLogin;
 
     String userName, passWord;
     LoginPresenter iLoginPresenter;
     String shfKey = "save login";// key để lưu thông tin đăng nhập
+    @BindView(R.id.cbSaveLogin)
+    CheckBox cbSaveLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_login_app);
+            setContentView(R.layout.activity_login_phone_number);
             ButterKnife.bind(this);
             initPresenter();
         } catch (Exception e) {
@@ -50,20 +61,20 @@ public class LoginView extends AppCompatActivity implements ILoginContract.ILogi
         }
     }
 
-    @OnClick(R.id.btnLogin)
-    public void onViewClicked() {
-        try {
-            getTextAccount();
-            iLoginPresenter.loadAccount(userName, passWord);
-        } catch (Exception e) {
-            e.printStackTrace();
+    @OnClick({R.id.btnBack, R.id.btnLogin})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.btnBack:
+                break;
+            case R.id.btnLogin:
+                getTextAccount();
+                iLoginPresenter.loadAccount(userName, passWord);
+                break;
         }
     }
 
     /**
      * Hàm khởi tạo presenter
-     * @param
-     * @return
      */
     private void initPresenter() {
         iLoginPresenter = new LoginPresenter(new LoginModel(), this);
@@ -74,8 +85,8 @@ public class LoginView extends AppCompatActivity implements ILoginContract.ILogi
      */
     public void getTextAccount() {
         try {
-            userName = etInputEmail.getText().toString().trim();
-            passWord = etInputPassword.getText().toString().trim();
+            userName = edUserName.getText().toString().trim();
+            passWord = edPassword.getText().toString().trim();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -92,7 +103,7 @@ public class LoginView extends AppCompatActivity implements ILoginContract.ILogi
     @Override
     public void showOnSuccess() {
         try {
-            startActivity(new Intent(LoginView.this, MainApp.class));
+            startActivity(new Intent(LoginPhoneNumber.this, MainApp.class));
             Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -127,8 +138,8 @@ public class LoginView extends AppCompatActivity implements ILoginContract.ILogi
             SharedPreferences pre = getSharedPreferences
                     (shfKey, MODE_PRIVATE);
             SharedPreferences.Editor editor = pre.edit();
-            String user = etInputEmail.getText().toString();
-            String pwd = etInputPassword.getText().toString();
+            String user = edUserName.getText().toString();
+            String pwd = edPassword.getText().toString();
             boolean bchk = cbSaveLogin.isChecked();
             if (!bchk) {
                 editor.clear();
@@ -155,8 +166,8 @@ public class LoginView extends AppCompatActivity implements ILoginContract.ILogi
             if (bchk) {
                 String user = pre.getString("user", "");
                 String pwd = pre.getString("pwd", "");
-                etInputEmail.setText(user);
-                etInputPassword.setText(pwd);
+                edUserName.setText(user);
+                edPassword.setText(pwd);
             }
             cbSaveLogin.setChecked(bchk);
         } catch (Exception e) {
@@ -183,4 +194,5 @@ public class LoginView extends AppCompatActivity implements ILoginContract.ILogi
             e.printStackTrace();
         }
     }
+
 }

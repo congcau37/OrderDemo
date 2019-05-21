@@ -48,22 +48,6 @@ public class MainApp extends AppCompatActivity
             setContentView(R.layout.activity_main_app);
             ButterKnife.bind(this);
             initView();
-            initData();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * Hàm
-     *
-     * @param
-     * @return
-     */
-    private void initData() {
-        try {
-            DBOpenHeplper heplper = new DBOpenHeplper(MainApp.this);
-            heplper.createDataBase();
         } catch (Exception e) {
             e.printStackTrace();
         }
