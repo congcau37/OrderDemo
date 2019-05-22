@@ -48,7 +48,7 @@
                 android:layout_marginRight="@dimen/app_margin_medium"
                 android:background="@drawable/bg_icon_login_fb"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/button_login" />
+                android:layout_height="@dimen/btn_login_height" />
             <Button
                 android:text="@string/btn_login_google"
                 android:textColor="@color/colorWhite"
@@ -57,7 +57,7 @@
                 android:layout_marginRight="@dimen/app_margin_medium"
                 android:background="@drawable/bg_icon_login_google"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/button_login" />
+                android:layout_height="@dimen/btn_login_height" />
             <Button
                 android:id="@+id/btnLoginPhoneEmail"
                 android:text="@string/btn_login_phone"
@@ -67,7 +67,7 @@
                 android:layout_marginRight="@dimen/app_margin_medium"
                 android:background="@drawable/bg_icon_login_phone_email"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/button_login" />
+                android:layout_height="@dimen/btn_login_height" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,7 +85,7 @@
             <TextView
                 android:text="Đăng ký"
                 android:textStyle="bold"
-                android:textSize="@dimen/text_size_medium"
+                android:textSize="@dimen/tv_size_medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>

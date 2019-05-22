@@ -37,8 +37,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:textStyle="normal"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/text_size_medium" />
+                    android:textSize="@dimen/tv_size_medium" />
 
                 <TextView
                     android:id="@+id/tv_saveFood"
@@ -204,6 +205,6 @@
         android:background="@drawable/bg_button_save"
         android:text="@string/btn_save"
         android:textColor="@color/colorWhite"
-        android:textSize="@dimen/text_size_big" />
+        android:textSize="@dimen/tv_size_big" />
 
 </RelativeLayout>

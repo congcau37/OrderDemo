@@ -20,8 +20,7 @@
 
             <TextView
                 android:id="@+id/tvTitleToolbar"
-                android:textSize="@dimen/text_size_big"
-                android:textStyle="bold"
+                android:textSize="@dimen/tv_size_medium"
                 android:gravity="center_horizontal"
                 android:textColor="@color/colorWhite"
                 android:layout_width="match_parent"

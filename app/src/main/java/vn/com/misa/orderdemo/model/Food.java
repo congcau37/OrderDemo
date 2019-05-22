@@ -6,30 +6,30 @@ package vn.com.misa.orderdemo.model;
  * @date 5/20/2019
  */
 public class Food {
-    int idFood;
+    int foodID;
     String foodName;
     int Price;
-    String Unit;
+    int UnitID;
     int Color;
     int Icon;
     String Status;
 
-    public Food(int idFood, String foodName, int price, String unit, int color, int icon, String status) {
-        this.idFood = idFood;
+    public Food(int foodID, String foodName, int price, int unitID, int color, int icon, String status) {
+        this.foodID = foodID;
         this.foodName = foodName;
         Price = price;
-        Unit = unit;
+        UnitID = unitID;
         Color = color;
         Icon = icon;
         Status = status;
     }
 
-    public int getIdFood() {
-        return idFood;
+    public int getFoodID() {
+        return foodID;
     }
 
-    public void setIdFood(int idFood) {
-        this.idFood = idFood;
+    public void setFoodID(int foodID) {
+        this.foodID = foodID;
     }
 
     public String getFoodName() {
@@ -48,12 +48,12 @@ public class Food {
         Price = price;
     }
 
-    public String getUnit() {
-        return Unit;
+    public int getUnitID() {
+        return UnitID;
     }
 
-    public void setUnit(String unit) {
-        Unit = unit;
+    public void setUnitID(int unitID) {
+        UnitID = unitID;
     }
 
     public int getColor() {

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -87,6 +88,9 @@ public class LoginPhoneNumber extends AppCompatActivity implements ILoginContrac
         try {
             userName = edUserName.getText().toString().trim();
             passWord = edPassword.getText().toString().trim();
+
+            String pass= String.format(getString(R.string.et_forgot_password),passWord);
+            Log.d("SBC", pass);
         } catch (Exception e) {
             e.printStackTrace();
         }

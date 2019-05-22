@@ -22,14 +22,14 @@ import vn.com.misa.orderdemo.model.Food;
  * @created_by tdcong
  * @date 5/17/2019
  */
-public class OrderView extends Fragment implements OrderContract.IOrderView {
+public class OrderView extends Fragment implements IOrderContract.IOrderView {
 
     Unbinder unbinder;
     @BindView(R.id.lvFood)
     ListView lvFood;
     View view;
     OrderAdapter adapter;
-    OrderContract.IOrderPresenter orderPresenter;
+    IOrderContract.IOrderPresenter orderPresenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -10,7 +10,7 @@ import vn.com.misa.orderdemo.model.Food;
  * @created_by tdcong
  * @date 5/20/2019
  */
-public interface OrderContract {
+public interface IOrderContract {
 
     interface IOrderView {
 

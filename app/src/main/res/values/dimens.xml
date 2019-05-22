@@ -8,9 +8,8 @@
     <dimen name="app_margin_small">10dp</dimen>
     <dimen name="app_margin_medium">16dp</dimen>
     <dimen name="app_margin_big">20dp</dimen>
-    <dimen name="text_size_small">16dp</dimen>
-    <dimen name="text_size_medium">20dp</dimen>
-    <dimen name="text_size_big">30dp</dimen>
-    <dimen name="button_login">60dp</dimen>
-    <dimen name="height_btn_login">55.0dip</dimen>
+    <dimen name="tv_size_small">16dp</dimen>
+    <dimen name="tv_size_medium">20dp</dimen>
+    <dimen name="tv_size_big">30dp</dimen>
+    <dimen name="btn_login_height">60dp</dimen>
 </resources>

@@ -1,8 +1,5 @@
 package vn.com.misa.orderdemo.order;
 
-import android.support.v4.app.FragmentActivity;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import vn.com.misa.orderdemo.model.Food;
@@ -13,11 +10,11 @@ import vn.com.misa.orderdemo.model.Food;
  * @created_by tdcong
  * @date 5/10/2019
  */
-public class OrderPresenter implements OrderContract.IOrderPresenter {
-    OrderContract.IOrderView iOrderView;
+public class OrderPresenter implements IOrderContract.IOrderPresenter {
+    IOrderContract.IOrderView iOrderView;
     IOrder iOrder;
 
-    public OrderPresenter(IOrder iOrder, OrderContract.IOrderView iOrderView) {
+    public OrderPresenter(IOrder iOrder, IOrderContract.IOrderView iOrderView) {
         this.iOrder = iOrder;
         this.iOrderView = iOrderView;
     }
